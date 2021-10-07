@@ -3,32 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
-{
-    // Start is called before the first frame update
+{   
+    public Vector3 InitialPosition;
+    Vector2 directionToInitialPosition = InitialPosition - transform.position;
+    
     void Start()
     {
-        
+        GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    void update()
     {
-        
+        InitialPosition = transform.position;
     }
 
-    private void OnMouseDown()
+    void OnMouseDown()
     {
         GetComponent<SpriteRenderer>().color = Color.red;
     }
 
-    private void OnMouseUp()
+    void OnMouseUp()
     {
         GetComponent<SpriteRenderer>().color = Color.white;
+
+        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition);
+        GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 
-    private void OnMouseDrag()
+    void OnMouseDrag()
     {
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = Input.mousePosition;
+        transform.position = new Vector3(newPosition.x, newPosition.y);
     }
 }
