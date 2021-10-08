@@ -5,14 +5,15 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {   
     public Vector3 InitialPosition;
-    
+
     void Start()
     {
         GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
-    void update()
+    void Fixedupdate()
     {
+
         InitialPosition = transform.position;
     }
 
@@ -25,8 +26,9 @@ public class Bird : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.white;
 
-        Vector2 directionToInitialPosition = InitialPosition - transform.position;
-        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition);
+        transform.position = InitialPosition;
+        //Vector3 directionToInitialPosition = InitialPosition - transform.position;
+        //GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition);
         GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 
