@@ -26,7 +26,7 @@ public class Bird : MonoBehaviour
         GetComponent<SpriteRenderer>().color = Color.white;
 
         Vector3 directionToInitialPosition = InitialPosition - transform.position;
-        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * 100);
+        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * 300);
         GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 
@@ -34,12 +34,12 @@ public class Bird : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            GetComponent<Rigidbody2D>().gravityScale = 0;           //turns off gravity
-            transform.position = InitialPosition;                   //resets position
-            transform.Rotate(0, 0, 0);
-            GetComponent<Rigidbody2D>().angularVelocity = 0;        //stops rotation force
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //stops movement force
-            //Debug.Log("position reset");                            //logs in console
+            GetComponent<Rigidbody2D>().gravityScale = 0;           //Turns Gravity Off
+            transform.position = InitialPosition;                   //Resets Position
+            transform.rotation = Quaternion.identity;               //Resets Rotation
+            GetComponent<Rigidbody2D>().angularVelocity = 0;        //Stop Rotation Force
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //Stop Movement Force
+            Debug.Log("position reset");                            //Log In Console
         }
     }
 
