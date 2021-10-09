@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {   
-    Vector3 InitialPosition;
+    public float _forceMuliplier = 300F;
+    Vector3 _initialPosition;
 
     void Start()
     {
@@ -13,7 +14,7 @@ public class Bird : MonoBehaviour
 
     void Awake()
     {
-        InitialPosition = transform.position;
+        _initialPosition = transform.position;
     }
 
     void OnMouseDown()
@@ -25,8 +26,8 @@ public class Bird : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.white;
 
-        Vector3 directionToInitialPosition = InitialPosition - transform.position;
-        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * 300);
+        Vector3 directionToInitialPosition = _initialPosition - transform.position;
+        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * _forceMuliplier);
         GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 
@@ -35,7 +36,7 @@ public class Bird : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             GetComponent<Rigidbody2D>().gravityScale = 0;           //Turns Gravity Off
-            transform.position = InitialPosition;                   //Resets Position
+            transform.position = _initialPosition;                   //Resets Position
             transform.rotation = Quaternion.identity;               //Resets Rotation
             GetComponent<Rigidbody2D>().angularVelocity = 0;        //Stop Rotation Force
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //Stop Movement Force
