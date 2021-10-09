@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {   
-    public Vector3 InitialPosition;
+    Vector3 InitialPosition;
 
     void Start()
     {
         GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
-    void Fixedupdate()
+    void Awake()
     {
-
         InitialPosition = transform.position;
     }
 
@@ -26,10 +25,22 @@ public class Bird : MonoBehaviour
     {
         GetComponent<SpriteRenderer>().color = Color.white;
 
-        transform.position = InitialPosition;
-        //Vector3 directionToInitialPosition = InitialPosition - transform.position;
-        //GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition);
+        Vector3 directionToInitialPosition = InitialPosition - transform.position;
+        GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * 100);
         GetComponent<Rigidbody2D>().gravityScale = 1;
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 0;           //turns off gravity
+            transform.position = InitialPosition;                   //resets position
+            transform.Rotate(0, 0, 0);
+            GetComponent<Rigidbody2D>().angularVelocity = 0;        //stops rotation force
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //stops movement force
+            //Debug.Log("position reset");                            //logs in console
+        }
     }
 
     void OnMouseDrag()
