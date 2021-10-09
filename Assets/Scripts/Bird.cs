@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {   
-    public float _forceMuliplier = 300F;
+    public float _forceMuliplier = 250F;
     Vector3 _initialPosition;
 
     void Start()
