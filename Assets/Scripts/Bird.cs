@@ -20,6 +20,9 @@ public class Bird : MonoBehaviour
 
     void Update()
     {
+        GetComponent<LineRenderer>().SetPosition(0, _initialPosition);
+        GetComponent<LineRenderer>().SetPosition(1, transform.position);
+
         if (Input.GetKeyDown(KeyCode.R))                            //Reset Script
         {
             GetComponent<Rigidbody2D>().gravityScale = 0;           //Turns Gravity Off
