@@ -20,17 +20,17 @@ public class Bird : MonoBehaviour
 
     void Update()
     {
-        GetComponent<LineRenderer>().SetPosition(0, _initialPosition);
-        GetComponent<LineRenderer>().SetPosition(1, transform.position);
+        GetComponent<LineRenderer>().SetPosition(0, _initialPosition);      //Set Line Renderer Extreme 1 on initial bird position
+        GetComponent<LineRenderer>().SetPosition(1, transform.position);    //Set Line Renderer Extreme 2 on current bird position
 
-        if (Input.GetKeyDown(KeyCode.R))                            //Reset Script
+        if (Input.GetKeyDown(KeyCode.R))                                    //Reset Script
         {
-            GetComponent<Rigidbody2D>().gravityScale = 0;           //Turns Gravity Off
-            transform.position = _initialPosition;                  //Resets Position
-            transform.rotation = Quaternion.identity;               //Resets Rotation
-            GetComponent<Rigidbody2D>().angularVelocity = 0;        //Stop Rotation Force
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //Stop Movement Force
-            Debug.Log("position reset");                            //Log In Console
+            GetComponent<Rigidbody2D>().gravityScale = 0;                   //Turns Gravity Off
+            transform.position = _initialPosition;                          //Resets Position
+            transform.rotation = Quaternion.identity;                       //Resets Rotation
+            GetComponent<Rigidbody2D>().angularVelocity = 0;                //Stop Rotation Force
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;            //Stop Movement Force
+            Debug.Log("position reset");                                    //Log In Console
         }
     }
 
