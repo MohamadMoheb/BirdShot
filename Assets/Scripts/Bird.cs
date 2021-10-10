@@ -5,6 +5,7 @@ using UnityEngine;
 public class Bird : MonoBehaviour
 {   
     public float _forceMuliplier = 250F;
+
     Vector3 _initialPosition;
 
     void Start()
@@ -33,10 +34,10 @@ public class Bird : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))                            //Reset Script
         {
             GetComponent<Rigidbody2D>().gravityScale = 0;           //Turns Gravity Off
-            transform.position = _initialPosition;                   //Resets Position
+            transform.position = _initialPosition;                  //Resets Position
             transform.rotation = Quaternion.identity;               //Resets Rotation
             GetComponent<Rigidbody2D>().angularVelocity = 0;        //Stop Rotation Force
             GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //Stop Movement Force
