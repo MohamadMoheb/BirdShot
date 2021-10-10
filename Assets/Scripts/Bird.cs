@@ -18,6 +18,19 @@ public class Bird : MonoBehaviour
         _initialPosition = transform.position;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))                            //Reset Script
+        {
+            GetComponent<Rigidbody2D>().gravityScale = 0;           //Turns Gravity Off
+            transform.position = _initialPosition;                  //Resets Position
+            transform.rotation = Quaternion.identity;               //Resets Rotation
+            GetComponent<Rigidbody2D>().angularVelocity = 0;        //Stop Rotation Force
+            GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //Stop Movement Force
+            Debug.Log("position reset");                            //Log In Console
+        }
+    }
+
     void OnMouseDown()
     {
         GetComponent<SpriteRenderer>().color = Color.red;
@@ -30,19 +43,6 @@ public class Bird : MonoBehaviour
         Vector3 directionToInitialPosition = _initialPosition - transform.position;
         GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * _forceMuliplier);
         GetComponent<Rigidbody2D>().gravityScale = 1;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.R))                            //Reset Script
-        {
-            GetComponent<Rigidbody2D>().gravityScale = 0;           //Turns Gravity Off
-            transform.position = _initialPosition;                  //Resets Position
-            transform.rotation = Quaternion.identity;               //Resets Rotation
-            GetComponent<Rigidbody2D>().angularVelocity = 0;        //Stop Rotation Force
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;    //Stop Movement Force
-            Debug.Log("position reset");                            //Log In Console
-        }
     }
 
     void OnMouseDrag()
