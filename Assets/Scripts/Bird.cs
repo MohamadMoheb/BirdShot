@@ -37,6 +37,7 @@ public class Bird : MonoBehaviour
     void OnMouseDown()
     {
         GetComponent<SpriteRenderer>().color = Color.red;
+        GetComponent<LineRenderer>().enabled = true;
     }
 
     void OnMouseUp()
@@ -46,6 +47,8 @@ public class Bird : MonoBehaviour
         Vector3 directionToInitialPosition = _initialPosition - transform.position;
         GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * _forceMuliplier);
         GetComponent<Rigidbody2D>().gravityScale = 1;
+
+        GetComponent<LineRenderer>().enabled = false;
     }
 
     void OnMouseDrag()
