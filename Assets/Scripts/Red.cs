@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bird : MonoBehaviour
+public class Red : MonoBehaviour
 {
     [SerializeField] private float _forceMuliplier = 250F;
 
