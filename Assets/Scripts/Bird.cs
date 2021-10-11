@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
-{   
+{
     public float _forceMuliplier = 250F;
 
     Vector3 _initialPosition;
@@ -20,8 +20,8 @@ public class Bird : MonoBehaviour
 
     void Update()
     {
-        GetComponent<LineRenderer>().SetPosition(0, _initialPosition);      //Sets Line Renderer Extreme 1 on initial bird position
-        GetComponent<LineRenderer>().SetPosition(1, transform.position);    //Sets Line Renderer Extreme 2 on current bird position
+        GetComponent<LineRenderer>().SetPosition(0, transform.position);    //Sets Line Renderer Extreme 1 on initial bird position
+        GetComponent<LineRenderer>().SetPosition(1, _initialPosition);      //Sets Line Renderer Extreme 2 on current bird position
 
         if (Input.GetKeyDown(KeyCode.R))                                    //Resets Script
         {
