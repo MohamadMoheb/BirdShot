@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
-    public float _forceMuliplier = 250F;
+    [SerializeField] private float _forceMuliplier = 250F;
 
-    Vector3 _initialPosition;
+    [SerializeField] private Vector3 _initialPosition;
 
     void Start()
     {
@@ -36,14 +36,11 @@ public class Bird : MonoBehaviour
 
     void OnMouseDown()
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
         GetComponent<LineRenderer>().enabled = true;
     }
 
     void OnMouseUp()
     {
-        GetComponent<SpriteRenderer>().color = Color.white;
-
         Vector3 directionToInitialPosition = _initialPosition - transform.position;
         GetComponent<Rigidbody2D>().AddForce(directionToInitialPosition * _forceMuliplier);
         GetComponent<Rigidbody2D>().gravityScale = 1;
