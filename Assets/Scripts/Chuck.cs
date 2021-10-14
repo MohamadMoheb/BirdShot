@@ -7,6 +7,8 @@ public class Chuck : MonoBehaviour
     [SerializeField] private float _forceMuliplier = 250F;
     [SerializeField] private Vector3 _initialPosition;
 
+    public bool _abilityactivated;
+
     void Start()
     {
         GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -32,10 +34,11 @@ public class Chuck : MonoBehaviour
             Debug.Log("position reset");                                    //Logs In Console
         }
 
-         if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 2)
+         if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 2 && _abilityactivated == false)
         {
+            _abilityactivated = true;
+            GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity * 2;
             Debug.Log("Ability Activated");
-
         }
     }
 
