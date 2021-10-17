@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class TheBluesAbility : MonoBehaviour
 {
-
+    [SerializeField] private GameObject prefab;
+    [SerializeField] private Vector2 spawnPosition;
+    [SerializeField] private bool random;
+    
     public bool _activated;
 
     // Start is called before the first frame update
-    void Start()
+    /*public void OnSpawnPrefab()
     {
-        
+        if(random)
+        {
+            float x = Random.Range(-8,8);
+            float y = Random.Range(-4,4);
+            Instantiate(prefab, new Vector2(x, y), Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(prefab, spawnPosition, Quaternion.identity);
+        }
     }
-
+*/
     // Update is called once per frame
     void Update()
     {
@@ -20,6 +32,10 @@ public class TheBluesAbility : MonoBehaviour
         {
             _activated = true;
             Debug.Log("Ability Activated");
+
+            float x = Random.Range(-8,8);
+            float y = Random.Range(-4,4);
+            Instantiate(prefab, new Vector2(x, y), Quaternion.identity);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
