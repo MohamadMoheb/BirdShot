@@ -39,7 +39,7 @@ public class TheBlues : MonoBehaviour
         {
             _activated = true;
             
-             Instantiate(TheBlues, new Vector3(0, 0, 0));
+            
 
             Debug.Log("Ability Activated");
         }
