@@ -38,7 +38,9 @@ public class TheBlues : MonoBehaviour
          if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 2 && _activated == false)
         {
             _activated = true;
-            GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity * 2;
+            
+             Instantiate(TheBlues, new Vector3(0, 0, 0));
+
             Debug.Log("Ability Activated");
         }
     }
