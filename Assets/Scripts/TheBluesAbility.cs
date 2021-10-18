@@ -20,9 +20,9 @@ public class TheBluesAbility : MonoBehaviour
         _spawnpoint1edit.Set(0,+2,0);
         _spawnpoint2edit.Set(0,-2,0);
 
-        if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 2 && _activated == false)
+        if (GetComponent<Rigidbody2D>().velocity.magnitude > 2 && _activated == false)
         {
-            _activated = true;
+            _activated = false;
             Debug.Log("Ability Activated");
 
             _spawnpoint1 = transform.position + _spawnpoint1edit;
