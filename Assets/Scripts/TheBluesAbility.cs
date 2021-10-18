@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TheBluesAbility : MonoBehaviour
 {
+    public Rigidbody2D rb; //reference rigidbody2d
+
     [SerializeField] private GameObject prefab;
     [SerializeField] private Vector3 _spawnpoint1edit;//spawn location editor for clone 1
     [SerializeField] private Vector3 _spawnpoint2edit;//spawn location editor for clone 2
@@ -35,6 +37,6 @@ public class TheBluesAbility : MonoBehaviour
             _activated = false;
         }
 
-        Debug.Log("rotation"+ transform.rotation);
+        print("velocity"+ rb.velocity);
     }
 }
