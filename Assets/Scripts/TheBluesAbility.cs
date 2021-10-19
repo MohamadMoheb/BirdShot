@@ -36,9 +36,9 @@ public class TheBluesAbility : MonoBehaviour
 
             Instantiate(_prefab1, _spawnpoint1, Quaternion.identity);
             Instantiate(_prefab2, _spawnpoint2, Quaternion.identity);
-
-            _prefab1.transform.SetParent(Player.transform);
         }
+
+        
 
         if (Input.GetKeyDown(KeyCode.R))
         {
