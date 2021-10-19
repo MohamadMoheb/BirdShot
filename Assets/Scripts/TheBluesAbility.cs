@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class TheBluesAbility : MonoBehaviour
 {
+    public GameObject Player;
+
     public Rigidbody2D rb; //reference rigidbody2d
 
     [SerializeField] private GameObject _prefab1;
     [SerializeField] private GameObject _prefab2;
-    [SerializeField] private Vector3 _spawnpoint1edit;//spawn location editor for clone 1
-    [SerializeField] private Vector3 _spawnpoint2edit;//spawn location editor for clone 2
+    private Vector3 _spawnpoint1edit;//spawn location editor for clone 1
+    private Vector3 _spawnpoint2edit;//spawn location editor for clone 2
     [SerializeField] private Vector3 _spawnpoint1; // set spawn point for clone 1
     [SerializeField] private Vector3 _spawnpoint2; //set spawn point for clone 2
-    [SerializeField] private Vector3 _velocity;
+    //[SerializeField] private Vector3 _velocity;
 
     public bool _activated;
 
@@ -30,15 +32,17 @@ public class TheBluesAbility : MonoBehaviour
             _spawnpoint1 = transform.position + _spawnpoint1edit;
             _spawnpoint2 = transform.position + _spawnpoint2edit;
 
+           // _velocity = rb.velocity;
+
             Instantiate(_prefab1, _spawnpoint1, Quaternion.identity);
             Instantiate(_prefab2, _spawnpoint2, Quaternion.identity);
+
+            _prefab1.transform.SetParent(Player.transform);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             _activated = false;
         }
-
-        //print("velocity"+ rb.velocity);
     }
 }
