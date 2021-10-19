@@ -6,11 +6,13 @@ public class TheBluesAbility : MonoBehaviour
 {
     public Rigidbody2D rb; //reference rigidbody2d
 
-    [SerializeField] private GameObject prefab;
+    [SerializeField] private GameObject _prefab1;
+    [SerializeField] private GameObject _prefab2;
     [SerializeField] private Vector3 _spawnpoint1edit;//spawn location editor for clone 1
     [SerializeField] private Vector3 _spawnpoint2edit;//spawn location editor for clone 2
     [SerializeField] private Vector3 _spawnpoint1; // set spawn point for clone 1
     [SerializeField] private Vector3 _spawnpoint2; //set spawn point for clone 2
+    [SerializeField] private Vector3 _velocity;
 
     public bool _activated;
 
@@ -28,8 +30,8 @@ public class TheBluesAbility : MonoBehaviour
             _spawnpoint1 = transform.position + _spawnpoint1edit;
             _spawnpoint2 = transform.position + _spawnpoint2edit;
 
-            Instantiate(prefab, _spawnpoint1, Quaternion.identity);
-            Instantiate(prefab, _spawnpoint2, Quaternion.identity);
+            Instantiate(_prefab1, _spawnpoint1, Quaternion.identity);
+            Instantiate(_prefab2, _spawnpoint2, Quaternion.identity);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
@@ -37,6 +39,6 @@ public class TheBluesAbility : MonoBehaviour
             _activated = false;
         }
 
-        print("velocity"+ rb.velocity);
+        //print("velocity"+ rb.velocity);
     }
 }
