@@ -14,7 +14,6 @@ public class TheBluesAbility : MonoBehaviour
     private Vector3 _spawnpoint2edit;//spawn location editor for clone 2
     [SerializeField] private Vector3 _spawnpoint1; // set spawn point for clone 1
     [SerializeField] private Vector3 _spawnpoint2; //set spawn point for clone 2
-    //[SerializeField] private Vector3 _velocity;
 
     public bool _activated;
 
@@ -32,13 +31,12 @@ public class TheBluesAbility : MonoBehaviour
             _spawnpoint1 = transform.position + _spawnpoint1edit;
             _spawnpoint2 = transform.position + _spawnpoint2edit;
 
-           // _velocity = rb.velocity;
+            var clone1 = Instantiate (_prefab1, transform.position + _spawnpoint1edit , Quaternion.identity);
+            var clone2 = Instantiate (_prefab2, transform.position + _spawnpoint2edit , Quaternion.identity);
 
-            Instantiate(_prefab1, _spawnpoint1, Quaternion.identity);
-            Instantiate(_prefab2, _spawnpoint2, Quaternion.identity);
+            clone1.transform.parent = gameObject.transform;
+            clone2.transform.parent = gameObject.transform;
         }
-
-        
 
         if (Input.GetKeyDown(KeyCode.R))
         {
