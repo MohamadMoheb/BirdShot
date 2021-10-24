@@ -34,8 +34,8 @@ public class TheBluesAbility : MonoBehaviour
             var clone1 = Instantiate (_prefab1, transform.position + _spawnpoint1edit , Quaternion.identity);
             var clone2 = Instantiate (_prefab2, transform.position + _spawnpoint2edit , Quaternion.identity);
 
-            clone1.transform.parent = gameObject.transform;
-            clone2.transform.parent = gameObject.transform;
+            //clone1.transform.parent = gameObject.transform;
+            //clone2.transform.parent = gameObject.transform; //parenting script
         }
 
         if (Input.GetKeyDown(KeyCode.R))
