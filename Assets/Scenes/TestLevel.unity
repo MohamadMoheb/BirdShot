@@ -266,6 +266,10 @@ PrefabInstance:
       value: TheBlues
       objectReference: {fileID: 0}
     - target: {fileID: 1307426994328724744, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307426994328724744, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
@@ -279,7 +283,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1307426994328724786, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1307426994328724786, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: m_LocalPosition.y
@@ -320,7 +324,7 @@ PrefabInstance:
     - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: rb
       value: 
-      objectReference: {fileID: 760817214}
+      objectReference: {fileID: 1063403046832571935, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
     - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: Player
       value: 
@@ -335,6 +339,10 @@ PrefabInstance:
       objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
     - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: _prefab2
+      value: 
+      objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
+    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
+      propertyPath: _prefab3
       value: 
       objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
     m_RemovedComponents: []
@@ -1084,7 +1092,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002707644}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.000009537, y: 0.000007629, z: 0}
+  m_LocalPosition: {x: 0.000009537, y: 0, z: 0}
   m_LocalScale: {x: 2.222225, y: 2.5000036, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
