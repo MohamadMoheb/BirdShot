@@ -17,7 +17,6 @@ public class TheBluesAbility : MonoBehaviour
 
     public bool _activated;
 
-    // Update is called once per frame
     void Update()
     {
         _spawnpoint1edit.Set(0,+2,0);
