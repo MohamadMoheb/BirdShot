@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1307426994328724786
 Transform:
   m_ObjectHideFlags: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _forceMuliplier: 250
   _initialPosition: {x: 0, y: 0, z: 0}
-  _activated: 0
+  rb: {fileID: 0}
 --- !u!114 &3024801414770400102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +114,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dfc1769e611b3d4a9f1f45b897e9a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  rb: {fileID: 0}
+  _prefab1: {fileID: 0}
+  _prefab2: {fileID: 0}
+  _prefab3: {fileID: 0}
+  _spawnpoint1: {x: 0, y: 0, z: 0}
+  _spawnpoint2: {x: 0, y: 0, z: 0}
+  _spawnpoint3: {x: 0, y: 0, z: 0}
+  _activated: 0
 --- !u!60 &1307426994328724751
 PolygonCollider2D:
   m_ObjectHideFlags: 0
