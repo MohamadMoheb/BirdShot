@@ -41,18 +41,14 @@ public class TheBlues : MonoBehaviour
 
         _velocitytest = GetComponent<Rigidbody2D>().velocity;
 
-        if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 2 && _activated == false)
+        if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 1 && _activated == false)
         {
             _activated = true;
             print("Ability Activated");
 
             GameObject clone1 = Instantiate(_prefab, transform.position + Vector3.up * offset, transform.rotation);
             GameObject clone2 = Instantiate(_prefab, transform.position, transform.rotation);
-            GameObject clone3 = Instantiate(_prefab, transform.position + Vector3.up * offset * -1, transform.rotation);
-
-            //clone1.GetComponent<Rigidbody2D>().velocity = rb.velocity;
-            //clone2.GetComponent<Rigidbody2D>().velocity = rb.velocity;
-            //clone3.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            GameObject clone3 = Instantiate(_prefab, transform.position + Vector3.up * -offset, transform.rotation);
 
             gameObject.SetActive(false);
         }
