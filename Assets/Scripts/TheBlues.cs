@@ -48,6 +48,7 @@ public class TheBlues : MonoBehaviour
         GetComponent<LineRenderer>().enabled = false;
     }
 
+
     void OnMouseDrag()
     {
         Vector3 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
