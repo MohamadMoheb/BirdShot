@@ -32,10 +32,7 @@ public class TheBluesAbility : MonoBehaviour
             clone2.GetComponent<Rigidbody2D>().velocity = rb.velocity;
             clone3.GetComponent<Rigidbody2D>().velocity = rb.velocity;
 
-            Player.SetActive(false);
-
-            //clone1.transform.parent = gameObject.transform;
-            //clone2.transform.parent = gameObject.transform; //parenting script
+            gameObject.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.R))
