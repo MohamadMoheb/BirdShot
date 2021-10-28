@@ -3,9 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TheBlues : MonoBehaviour
-{
+{ 
+    float offset = 2;
+    public GameObject Player;
     [SerializeField] private float _forceMuliplier = 250F;
     [SerializeField] private Vector3 _initialPosition;
+    [SerializeField] private GameObject _prefab;
+    public Vector2 _velocitytest;
+
+    public bool _activated;
 
     public Rigidbody2D rb; //reference rigidbody2d
     void Start()
@@ -32,6 +38,31 @@ public class TheBlues : MonoBehaviour
             rb.velocity = Vector3.zero;                 //Stops Movement Force
             Debug.Log("position reset");                //Logs In Console
         }
+
+        _velocitytest = GetComponent<Rigidbody2D>().velocity;
+
+        if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 2 && _activated == false)
+        {
+            _activated = true;
+            print("Ability Activated");
+
+            GameObject clone1 = Instantiate(_prefab, transform.position + Vector3.up * offset, transform.rotation);
+            GameObject clone2 = Instantiate(_prefab, transform.position, transform.rotation);
+            GameObject clone3 = Instantiate(_prefab, transform.position + Vector3.up * offset * -1, transform.rotation);
+
+            //clone1.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            //clone2.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            //clone3.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+
+            gameObject.SetActive(false);
+        }
+
+        print("rbvelo"+ _velocitytest);
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            _activated = false;
+        }
     }
 
     void OnMouseDown()
@@ -47,7 +78,6 @@ public class TheBlues : MonoBehaviour
 
         GetComponent<LineRenderer>().enabled = false;
     }
-
 
     void OnMouseDrag()
     {
