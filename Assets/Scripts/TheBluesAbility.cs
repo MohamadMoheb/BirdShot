@@ -16,8 +16,12 @@ public class TheBluesAbility : MonoBehaviour
 
     public bool _activated;
 
+    public Vector2 _velocitytest;
+
     void Update()
     {
+
+        _velocitytest = GetComponent<Rigidbody2D>().velocity;
 
         if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 2 && _activated == false)
         {
@@ -28,12 +32,14 @@ public class TheBluesAbility : MonoBehaviour
             GameObject clone2 = Instantiate(_prefab, transform.position, transform.rotation);
             GameObject clone3 = Instantiate(_prefab, transform.position + Vector3.up * offset * -1, transform.rotation);
 
-            clone1.GetComponent<Rigidbody2D>().velocity = rb.velocity;
-            clone2.GetComponent<Rigidbody2D>().velocity = rb.velocity;
-            clone3.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            //clone1.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            //clone2.GetComponent<Rigidbody2D>().velocity = rb.velocity;
+            //clone3.GetComponent<Rigidbody2D>().velocity = rb.velocity;
 
             gameObject.SetActive(false);
         }
+
+        print("rbvelo"+ _velocitytest);
 
         if (Input.GetKeyDown(KeyCode.R))
         {
