@@ -333,38 +333,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: rb
-      value: 
-      objectReference: {fileID: 1063403046832571935, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: Player
-      value: 
-      objectReference: {fileID: 1307426994328724744, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 1307426994328724744, guid: e60e47e0a56f93e4ba21dba0488f727a, type: 3}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: _prefab
-      value: 
-      objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: _prefab1
-      value: 
-      objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: _prefab2
-      value: 
-      objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: _prefab3
-      value: 
-      objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
-    - target: {fileID: 3024801414770400102, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
 --- !u!1 &461470835
