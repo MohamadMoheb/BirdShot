@@ -5,7 +5,6 @@ using UnityEngine;
 public class TheBlues : MonoBehaviour
 { 
     float offset = 2;
-    public GameObject Player;
     [SerializeField] private float _forceMuliplier = 250F;
     [SerializeField] private Vector3 _initialPosition;
     [SerializeField] private GameObject _prefab;
