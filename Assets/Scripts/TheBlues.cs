@@ -40,6 +40,7 @@ public class TheBlues : MonoBehaviour
             rb.angularVelocity = 0;                     //Stops Rotation Force
             rb.velocity = Vector3.zero;                 //Stops Movement Force
             Debug.Log("position reset");                //Logs In Console
+            _activated = false;
         }
 
         _velocity = GetComponent<Rigidbody2D>().velocity;
@@ -56,12 +57,7 @@ public class TheBlues : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        print("rbvelo"+ _velocitytest);
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            _activated = false;
-        }
+        print("rbvelo"+ _velocity);
     }
 
     void OnMouseDown()
