@@ -11,7 +11,9 @@ public class TheBlues : MonoBehaviour
     public Vector3 _initialPosition;
     public Vector2 _velocity;
 
-    public GameObject _prefab;
+    public GameObject Jay;
+    public GameObject Jake;
+    public GameObject Jim;
 
     public Rigidbody2D rb; //reference rigidbody2d
 
