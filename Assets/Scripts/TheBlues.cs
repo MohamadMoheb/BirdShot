@@ -11,9 +11,9 @@ public class TheBlues : MonoBehaviour
     public Vector3 _initialPosition;
     public Vector2 _velocity;
 
-    public GameObject Jay;
-    public GameObject Jake;
-    public GameObject Jim;
+    public GameObject _Jay;
+    public GameObject _Jake;
+    public GameObject _Jim;
 
     public Rigidbody2D rb; //reference rigidbody2d
 
@@ -52,9 +52,9 @@ public class TheBlues : MonoBehaviour
             _activated = true;
             print("Ability Activated");
 
-            GameObject clone1 = Instantiate(_prefab, transform.position + Vector3.up * offset, transform.rotation);
-            GameObject clone2 = Instantiate(_prefab, transform.position, transform.rotation);
-            GameObject clone3 = Instantiate(_prefab, transform.position + Vector3.up * -offset, transform.rotation);
+            GameObject clone1 = Instantiate(_Jay, transform.position + Vector3.up * offset, transform.rotation);
+            GameObject clone2 = Instantiate(_Jake, transform.position, transform.rotation);
+            GameObject clone3 = Instantiate(_Jim, transform.position + Vector3.up * -offset, transform.rotation);
 
             gameObject.SetActive(false);
         }

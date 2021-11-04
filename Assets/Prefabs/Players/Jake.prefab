@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1307426994328724749}
   - component: {fileID: 1307426994328724751}
   - component: {fileID: 1063403046832571935}
-  - component: {fileID: -1036066590382514310}
+  - component: {fileID: -4869165029004930738}
   m_Layer: 0
   m_Name: Jake
   m_TagString: Untagged
@@ -169,7 +169,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-1036066590382514310
+--- !u!114 &-4869165029004930738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1307426994328724744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dfc1769e611b3d4a9f1f45b897e9a1e, type: 3}
+  m_Script: {fileID: 11500000, guid: e8a6bbe0a65cfc7449d6fd590d4dff9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _clones: {fileID: 1307426994328724744}
+  _Jake: {fileID: 1307426994328724744}

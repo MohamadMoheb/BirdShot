@@ -278,6 +278,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 760817214}
     - target: {fileID: 1307426994328724748, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
+      propertyPath: _Jay
+      value: 
+      objectReference: {fileID: 1307426994328724744, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
+    - target: {fileID: 1307426994328724748, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
+      propertyPath: _Jim
+      value: 
+      objectReference: {fileID: 1307426994328724744, guid: 20fb94dc17df361428843369080cc848, type: 3}
+    - target: {fileID: 1307426994328724748, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
+      propertyPath: _Jake
+      value: 
+      objectReference: {fileID: 1307426994328724744, guid: 3166b4985b99a0b4888139cbafedd82a, type: 3}
+    - target: {fileID: 1307426994328724748, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: Player
       value: 
       objectReference: {fileID: 2104629678}

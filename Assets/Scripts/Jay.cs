@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TheBluesAbility : MonoBehaviour
+public class Jay : MonoBehaviour
 {
-    [SerializeField] private GameObject _clones;
+    [SerializeField] private GameObject _Jay;
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))                //Reset Script
+        if(Input.GetKeyDown(KeyCode.R))                //Reset Script
         {
-            _clones.SetActive(false);
+            _Jay.SetActive(false);
             Debug.Log("position reset (2)");            //Logs In Console
         }
     }
