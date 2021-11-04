@@ -5,14 +5,18 @@ using UnityEngine;
 public class TheBlues : MonoBehaviour
 { 
     float offset = 2;
-    [SerializeField] private float _forceMuliplier = 250F;
-    [SerializeField] private Vector3 _initialPosition;
-    [SerializeField] private GameObject _prefab;
-    public Vector2 _velocitytest;
+
+    public float _forceMuliplier = 250F;
+
+    public Vector3 _initialPosition;
+    public Vector2 _velocity;
+
+    public GameObject _prefab;
+
+    public Rigidbody2D rb; //reference rigidbody2d
 
     public bool _activated;
 
-    public Rigidbody2D rb; //reference rigidbody2d
     void Start()
     {
         rb.gravityScale = 0;
@@ -38,7 +42,7 @@ public class TheBlues : MonoBehaviour
             Debug.Log("position reset");                //Logs In Console
         }
 
-        _velocitytest = GetComponent<Rigidbody2D>().velocity;
+        _velocity = GetComponent<Rigidbody2D>().velocity;
 
         if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 1 && _activated == false)
         {
