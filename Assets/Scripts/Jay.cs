@@ -11,7 +11,7 @@ public class Jay : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))                //Reset Script
         {
             _Jay.SetActive(false);
-            Debug.Log("position reset (2)");            //Logs In Console
+            Debug.Log("position reset (jaydel)");            //Logs In Console
         }
     }
 }
