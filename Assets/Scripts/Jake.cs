@@ -11,7 +11,7 @@ public class Jake : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.R))                //Reset Script
         {
             _Jake.SetActive(false);
-            Debug.Log("position reset (2)");            //Logs In Console
+            Debug.Log("position reset (jakedel)");            //Logs In Console
         }
     }
 }
