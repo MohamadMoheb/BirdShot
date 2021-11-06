@@ -11,7 +11,7 @@ public class Jim : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))                //Reset Script
         {
             _Jim.SetActive(false);
-            Debug.Log("position reset (2)");            //Logs In Console
+            Debug.Log("position reset (jimdel)");            //Logs In Console
         }
     }
 }
