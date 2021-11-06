@@ -59,7 +59,7 @@ public class Blue : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        print("rbvelo"+ _velocity);
+        //print("rbvelo"+ _velocity);
     }
 
     void OnMouseDown()
