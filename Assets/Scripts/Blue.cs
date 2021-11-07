@@ -9,7 +9,7 @@ public class Blue : MonoBehaviour
     public float _forceMuliplier = 250F;
 
     public Vector3 _initialPosition;
-    public Vector2 _velocity;
+    public static Vector2 _bluevelocity;       //NEEDS TO BE SENT TO VARIABLES
 
     public GameObject _Jay;
     public GameObject _Jake;
@@ -45,7 +45,7 @@ public class Blue : MonoBehaviour
             _activated = false;
         }
 
-        _velocity = GetComponent<Rigidbody2D>().velocity;
+        _bluevelocity = GetComponent<Rigidbody2D>().velocity;
 
         if (Input.GetKeyDown(KeyCode.Space) && GetComponent<Rigidbody2D>().velocity.magnitude > 1 && _activated == false)
         {
@@ -59,7 +59,7 @@ public class Blue : MonoBehaviour
             gameObject.SetActive(false);
         }
 
-        //print("rbvelo"+ _velocity);
+        //print("rbvelo"+ _bluevelocity);
     }
 
     void OnMouseDown()
