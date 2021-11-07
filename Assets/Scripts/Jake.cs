@@ -6,8 +6,14 @@ public class Jake : MonoBehaviour
 {
     [SerializeField] private GameObject _Jake;
 
+    public static Vector2 _jakevelocity;       //NEEDS TO BE SENT TO VARIABLES
+
+    public Rigidbody2D rb; //reference rigidbody2d
+
     void Update()
     {
+        _jakevelocity = GetComponent<Rigidbody2D>().velocity;
+
         if(Input.GetKeyDown(KeyCode.R))                //Reset Script
         {
             _Jake.SetActive(false);
