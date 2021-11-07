@@ -394,6 +394,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &623040422 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1307426994328724748, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
+  m_PrefabInstance: {fileID: 1850359658}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d077b8b5f27d7554e85a155cf0f604fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1085442707
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,6 +710,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad322180e0ae574cbb134c6ec9446b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlueObj: {fileID: 623040422}
+  JayObj: {fileID: -1036066590382514310, guid: 92e50410cdb85734d9625f2cab4c7d9f, type: 3}
+  JakeObj: {fileID: -4869165029004930738, guid: 3166b4985b99a0b4888139cbafedd82a, type: 3}
+  JimObj: {fileID: 5826466279789092821, guid: 20fb94dc17df361428843369080cc848, type: 3}
   _BlueVelocity: {x: 0, y: 0}
   _JayVelocity: {x: 0, y: 0}
   _JakeVelocity: {x: 0, y: 0}
@@ -848,6 +863,10 @@ PrefabInstance:
     - target: {fileID: 1307426994328724744, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1307426994328724744, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 1307426994328724786, guid: 0ed881600ae23a84fb1218c787a5da75, type: 3}
       propertyPath: m_RootOrder
